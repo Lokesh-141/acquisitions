@@ -4,7 +4,7 @@ import { slidingWindow } from '@arcjet/node';
 
 const securityMiddleware = async (req, res, next) => {
   try {
-    const role = req.user?.role;
+    const role = req.user?.role || 'guest';
 
     let limit;
     let message;
